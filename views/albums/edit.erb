@@ -1,0 +1,33 @@
+<h1>edit album</h1>
+<form method = "post" action="/albums/<%=@album.id%>">
+
+  <label for="album-title">Album Title</label>
+  <input type="text" name ="name" id= "album-title" value="<%=@album.name%>"/>
+
+
+  <label for="artist-select">Artist:</label>
+  <select name="artist_id" id="artist-select" selected="<%= @album.artist_id  %>">
+    <% @artists.each do |artist| %>
+      <% if artist.id == @album.artist_id %>
+        <option value=<%= artist.id%> selected><%=artist.name%></option>
+      <% else %>
+        <option value=<%= artist.id%>><%= artist.name%></option>
+      <% end %>
+    <% end %>
+  </select>
+
+  <label for="album-genre">Genre</label>
+  <input type="text" name="genre" id="album-genre" value="<%=@album.genre%>"/>
+
+  <label for="album-quantity">Quantity</label>
+  <input type="number" name="quantity" id="album-quantity" value="<%=@album.quantity%>"/>
+
+  <label for="album-buy-price">Album Buy Price</label>
+  <input type="number" name="buy_price" id="album-buy-price" value="<%=@album.buy_price%>"/>
+
+  <label for="album-sell-price">Sell Price</label>
+  <input type="number" name="sell_price" id="album-sell-price" value="<%=@album.sell_price%>"/>
+
+  <input type="submit" value="Update Album"/>
+
+</form>

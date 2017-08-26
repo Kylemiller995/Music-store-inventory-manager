@@ -1,12 +1,19 @@
-require_relative('../models/album')
 require_relative('../models/artist')
+require_relative('../models/album')
+require('pry-byebug')
+
+
+Album.delete_all
+Artist.delete_all
+
 
 artist1 = Artist.new({'name' => 'J cole'})
+artist1.save
+
 artist2 = Artist.new({'name' => 'Beyonce'})
 artist3 = Artist.new({'name' => 'Loyle Carner'})
 artist4 = Artist.new({'name' => 'Alabama Shakes'})
 
-artist1.save
 artist2.save
 artist3.save
 artist4.save
@@ -67,3 +74,5 @@ album2.save
 album3.save
 album4.save
 album5.save
+binding.pry
+nil

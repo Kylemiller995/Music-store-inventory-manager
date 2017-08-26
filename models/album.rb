@@ -1,3 +1,4 @@
+require_relative('../db/sql_runner')
 
 
 class Album
@@ -12,7 +13,7 @@ class Album
     @quantity = details['quantity'].to_i
     @buy_price = details['buy_price'].to_f
     @sell_price = details['sell_price'].to_f
-    @stock_level = details['stock_level']
+    @stock_level = details['stock_level'] #put stock level method checker here
     @artist_id = details['artist_id'].to_i
   end
 
@@ -21,19 +22,23 @@ class Album
     VALUES
     ($1, $2, $3, $4, $5, $6, $7)
     RETURNING id"
+    values = [@name, @genre, @quantity, @buy_price, @sell_price, @stock_level, @artist_id,]
+    result = SqlRunner.run(sql, values)
+    id = result.first["id"]
+    @id = id.to_i
   end
 
   def update
     sql = "UPDATE album SET (name, genre, quantity, buy_price, sell_price, stock_level, artist_id)
     =
     ($1, $2, $3, $4, $5, $6, $7)
-    WHERE id = $5"
+    WHERE id = $8"
     values = [@name, @genre, @quantity, @buy_price, @sell_price, @stock_level, @artist_id, @id]
     SqlRunner.run(sql, values)
   end
 
   def self.delete_all()
-    sql = "DELETE FROM albums"
+    sql = "DELETE FROM album"
     values = []
     SqlRunner.run(sql, values)
   end
@@ -47,9 +52,9 @@ class Album
   def self.all
     sql = "SELECT * FROM album"
     values = []
-    albums = SqlRunner.run(sql, values)
-    result = albums.map{|album| Album.new(album)}
-    return result
+    album_data = SqlRunner.run(sql, values)
+    albums = map_items(album_data)
+    return albums
   end
 
   def self.find(id)
@@ -62,6 +67,7 @@ class Album
 
   def artist
     artist = Artist.find(@artist_id)
+    return artist
   end
 
   def self.map_items(album_details)

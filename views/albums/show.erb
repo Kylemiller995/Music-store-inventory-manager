@@ -1,0 +1,9 @@
+<h1>Current album selected</h1>
+
+<p><%=@album.name%></p>
+<p><%=@album.artist.name%></p>
+<p><%=@album.buy_price%></p>
+<p><%=@album.sell_price%></p>
+
+<a href="/albums/<%= @album.id %>/edit">Edit</a>
+<form action="/albums/<%= @album.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

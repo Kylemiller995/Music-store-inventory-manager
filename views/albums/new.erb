@@ -1,0 +1,25 @@
+<form method = "post" action="/albums">
+
+  <label for="album-title">Album Title</label>
+  <input type="text" name ="name" id= "album-title"/>
+
+  <select name="artist_id" id="album-artist">
+    <%@artists.each do |artist| %>
+      <option value = <%artist.id%>><%= artist.name %></option>
+    <%end%>
+
+  <label for="album-genre">Genre</label>
+  <input type="text" name="genre" id="album-genre"/>
+
+  <label for="album-quantity">Quantity</label>
+  <input type="number" name="quantity" id="album-quantity"/>
+
+  <label for="album-buy-price">Album Buy Price</label>
+  <input type="number" name="buy_price" id="album-buy-price"/>
+
+  <label for="album-sell-price">Sell Price</label>
+  <input type="number" name="sell_price" id="album-sell-price"/>
+
+  <input type="submit" value="Add New Album"/>
+
+</form>

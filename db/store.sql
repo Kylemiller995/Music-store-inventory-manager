@@ -1,5 +1,10 @@
 DROP TABLE album;
-DROP TABLE artists;
+DROP TABLE artist;
+
+CREATE TABLE artist(
+  id SERIAL8 primary key,
+  name VARCHAR(225)
+);
 
 CREATE TABLE album(
   id SERIAL8 primary key,
@@ -11,12 +16,6 @@ CREATE TABLE album(
   stock_level VARCHAR(225),
   artist_id INT8 REFERENCES artist(id)
 );
-
-CREATE TABLE artist(
-  id SERIAL8 primary key,
-  name VARCHAR(225)
-);
-
 
 
 -- module & mix in (what mike said) can save time
