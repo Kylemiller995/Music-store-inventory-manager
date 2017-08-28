@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/artist')
 require_relative('../models/album')
+require('pry-byebug')
 
 
 get '/albums' do
@@ -17,8 +18,20 @@ get '/albums/new' do
 end
 
 post '/albums' do
-  Album.new(params).save
-  redirect to '/albums'
+  if Artist.find_by_name(params["artist_name"]) != nil
+    artist = Artist.find_by_name(params["artist_name"])
+    album = Album.new(params)
+    album.artist_id = artist.id
+    album.save
+    redirect to '/albums'
+  else
+    artist = Artist.new(params)
+    artist.save
+    album = Album.new(params)
+    album.artist_id = artist.id
+    album.save
+    redirect to '/albums'
+  end
 end
 
 get '/albums/:id' do

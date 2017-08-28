@@ -3,7 +3,7 @@ DROP TABLE artist;
 
 CREATE TABLE artist(
   id SERIAL8 primary key,
-  name VARCHAR(225)
+  artist_name VARCHAR(225)
 );
 
 CREATE TABLE album(
@@ -13,8 +13,8 @@ CREATE TABLE album(
   quantity INT,
   buy_price NUMERIC,
   sell_price NUMERIC,
-  stock_level VARCHAR(225),
-  artist_id INT8 REFERENCES artist(id)
+  artist_id INT8 REFERENCES artist(id),
+  album_cover_url VARCHAR(225)
 );
 
 

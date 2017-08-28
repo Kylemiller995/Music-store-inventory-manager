@@ -3,10 +3,8 @@
   <label for="album-title">Album Title</label>
   <input type="text" name ="name" id= "album-title"/>
 
-  <select name="artist_id" id="album-artist">
-    <%@artists.each do |artist| %>
-      <option value = <%artist.id%>><%= artist.name %></option>
-    <%end%>
+  <label for="album-artist">Album Artist</label>
+  <input type="text" name ="artist_name" id= "album-artist"/>
 
   <label for="album-genre">Genre</label>
   <input type="text" name="genre" id="album-genre"/>
@@ -19,6 +17,9 @@
 
   <label for="album-sell-price">Sell Price</label>
   <input type="number" name="sell_price" id="album-sell-price"/>
+
+  <label for="album-cover-url">Album cover URL</label>
+  <input type="name" name="album_cover_url" id="album-cover-url"/>
 
   <input type="submit" value="Add New Album"/>
 
