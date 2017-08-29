@@ -1,26 +1,44 @@
-<form method = "post" action="/albums">
+<div class= "div_wrapper_top">
+  <h1 id="home_title">N EW  A LB UM</h1>
+</div>
 
-  <label for="album-title">Album Title</label>
-  <input type="text" name ="name" id= "album-title"/>
+<div class="homebar">
+  <a href="/home" class="create_new_cell">HO M E</a>
+</div>
 
-  <label for="album-artist">Album Artist</label>
-  <input type="text" name ="artist_name" id= "album-artist"/>
+<div class="create_new">
+  <p><a href="/albums" class="create_new_cell">A LBU MS</a></p>
+</div>
 
-  <label for="album-genre">Genre</label>
-  <input type="text" name="genre" id="album-genre"/>
+<div class="album_wrapper">
+  <div class="album_form">
 
-  <label for="album-quantity">Quantity</label>
-  <input type="number" name="quantity" id="album-quantity"/>
+    <form method = "post" action="/albums">
 
-  <label for="album-buy-price">Album Buy Price</label>
-  <input type="number" name="buy_price" id="album-buy-price"/>
+      <label for="album-title">Album Title</label>
+      <input type="text" name ="name" id= "album-title"/>
 
-  <label for="album-sell-price">Sell Price</label>
-  <input type="number" name="sell_price" id="album-sell-price"/>
+      <label for="album-artist">Album Artist</label>
+      <input type="text" name ="artist_name" id= "album-artist"/>
 
-  <label for="album-cover-url">Album cover URL</label>
-  <input type="name" name="album_cover_url" id="album-cover-url"/>
+      <label for="album-genre">Genre</label>
+      <input type="text" name="genre" id="album-genre"/>
 
-  <input type="submit" value="Add New Album"/>
+      <label for="album-quantity">Quantity</label>
+      <input type="number" name="quantity" id="album-quantity"/>
 
-</form>
+      <label for="album-buy-price">Album Buy Price</label>
+      <input type="number" name="buy_price" id="album-buy-price"/>
+
+      <label for="album-sell-price">Album Sell Price</label>
+      <input type="number" name="sell_price" id="album-sell-price"/>
+
+      <label for="album-cover-url">Album cover URL</label>
+      <input type="name" name="album_cover_url" id="album-cover-url"/>
+
+      <input type="submit" value="Add New Album"/>
+
+    </form>
+  </div>
+
+</div>

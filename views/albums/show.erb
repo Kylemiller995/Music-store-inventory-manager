@@ -1,12 +1,30 @@
-<h1>Current album selected</h1>
+<div class="div_wrapper_top">
+<h1 id="album_page_title">Album Analytics</h1>
+</div>
 
-<p><%=@album.name%></p>
-<p><%=@album.artist.artist_name%></p>
-<p><%=@album.buy_price%></p>
-<p><%=@album.sell_price%></p>
-<p><%=@album.stock_level(album.quantity)%>
-<p><%=@album.markup(album.buy_price, album.sell_price)%>%</p>
+<div class="homebar">
+  <a href="/home" class="create_new_cell">HO M E</a>
+</div>
 
+<div class="create_new">
+  <p><a href="/albums" class="create_new_cell">A LBU MS</a></p>
+</div>
 
-<a href="/albums/<%= @album.id %>/edit">Edit</a>
-<form action="/albums/<%= @album.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<div class="">
+
+</div>
+
+<div class="album_wrapper">
+  <div class ="album_cell">
+    <img src="<%=@album.album_cover_url%>" class= "album_images">
+    <p><%=@album.name%></p>
+    <p><%=@album.artist.artist_name%></p>
+    <p>Buy price  £<%=@album.buy_price%> </p>
+    <p>Sell price  £<%=@album.sell_price%></p>
+    <p>Stock Quantity  <%=@album.quantity%></p>
+    <p>Stock Level  <%=@album.stock_level(@album.quantity)%></p>
+    <p>Markup percentage  <%=@album.markup(@album.buy_price, @album.sell_price)%>%</p>
+    <a href="/albums/<%= @album.id %>/edit" class="">Edit Album Details</a>
+    <form action="/albums/<%= @album.id %>/delete" method="POST"><input type="submit" value="Delete Album"></form>
+    </div>
+</div>

@@ -1,5 +1,17 @@
-<h1>edit album</h1>
-<form method = "post" action="/albums/<%=@album.id%>">
+<div class= "div_wrapper_top">
+  <h1 id="home_title">E DIT  A LB UM</h1>
+</div>
+
+<div class="homebar">
+  <a href="/home" class="create_new_cell">HO M E</a>
+</div>
+
+<div class="create_new">
+  <p><a href="/albums" class="create_new_cell">A LBU MS</a></p>
+</div>
+
+  <div class="album_wrapper">
+    <div class="album_form">
 
   <label for="album-title">Album Title</label>
   <input type="text" name ="name" id= "album-title" value="<%=@album.name%>"/>
@@ -31,3 +43,5 @@
   <input type="submit" value="Update Album"/>
 
 </form>
+</div>
+</div>
