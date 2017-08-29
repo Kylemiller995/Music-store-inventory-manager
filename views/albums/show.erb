@@ -2,9 +2,10 @@
 
 <p><%=@album.name%></p>
 <p><%=@album.artist.artist_name%></p>
-<p>Buy price: <%=@album.buy_price%></p>
-<p>Sell Price: <%=@album.sell_price%></p>
-<p>Quantity :<%=@album.quantity%></p>
+<p><%=@album.buy_price%></p>
+<p><%=@album.sell_price%></p>
+<p><%=@album.stock_level(album.quantity)%>
+<p><%=@album.markup(album.buy_price, album.sell_price)%>%</p>
 
 
 <a href="/albums/<%= @album.id %>/edit">Edit</a>
