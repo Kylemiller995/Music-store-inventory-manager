@@ -1,6 +1,9 @@
 <h1>Current album selected</h1>
 
 <p><%=@artist.artist_name%></p>
+<%for album in @artist.find_albums()%>
+<p><%=album.name%></p>
+<% end %>
 
 
 <a href="/artists/<%= @artist.id %>/edit">Edit</a>

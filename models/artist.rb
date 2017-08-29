@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('./album.rb')
 
 
 class Artist
@@ -73,6 +74,18 @@ class Artist
     artist_by_name = Artist.new(result) if !result.nil?
     return artist_by_name
   end
+
+  def find_albums()
+    sql = "SELECT * FROM album WHERE artist_id = $1"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    albums_found = Album.map_items(result)
+    return albums_found
+  end
+
+
+
+
 
 
 end

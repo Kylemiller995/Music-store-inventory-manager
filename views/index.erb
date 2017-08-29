@@ -1,11 +1,32 @@
-<a href="/albums">albums</a>
-<a href="/artists">artists</a>
+<div class="div_wrapper_top" id="home_title">
+<h1>Keith's Record Store</h1>
+</div>
 
-<form method="post" action="/home">
+<div class="div_wrapper_mid">
+  <a class="div_wrapper_mid_cell" href="/artists">
+    <div class="images artists-image"></div>
+    <h2>Artists</h2>
+  </a>
+  <a class="div_wrapper_mid_cell" href="/albums">
+    <div class="images albums-image"></div>
+    <h2>Albums</h2>
+  </a>
+</div>
 
-<label for="album-search-by-name">search bar</label>
-<input type="text" name="name" id="album-search-by-name"/>
+<!-- <div class="div_wrapper_bot">
+  <div class="div_wrapper_bot_cell">
+    <h2><a href="/artists">Artists</a></h2>
+  </div>
+  <div class="div_wrapper_bot_cell">
+    <h2><a href="/albums">Albums</a></h2>
+  </div>
+</div> -->
 
-<input type="submit" value="Search"/>
-
-</form>
+<div class="div_wrapper_foot">
+  <div class="div_wrapper_foot_cell"
+    <form method="post" action="/home">
+      <label for="album-search-by-name">search bar</label>
+      <input type="text" name="name" id="album-search-by-name"/>
+    </form>
+  </div>
+</div>

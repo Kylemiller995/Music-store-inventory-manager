@@ -94,6 +94,13 @@ class Album
     return album_by_name
   end
 
+  def markup(buy_price, sell_price)
+    gross_profit = buy_price/sell_price
+    result = (gross_profit/buy_price)*100
+    return result.round(2)
+  end
+
+  
 
 
 

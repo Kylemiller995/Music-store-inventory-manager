@@ -1,0 +1,86 @@
+#home_title{
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-size: 40px
+
+}
+
+#home_subtitle{
+
+}
+
+
+#home_searchbar{
+
+}
+
+
+#home_image{
+
+}
+
+.div_wrapper_top{
+  width:100%;
+  height: 200px;
+
+}
+
+.div_wrapper_mid{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div_wrapper_mid_cell {
+  display: inline-block;
+  width: 47%;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px
+}
+
+
+.div_wrapper_bot{
+  display:flex;
+  width: 100%;
+  display: flex;
+  height: 100px;
+}
+
+.div_wrapper_bot_cell{
+  width: 47%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.div_wrapper_foot{
+  display:flex;
+  width: 100%;
+  height: 50px;
+  border: black solid;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background-color: #ffb649
+}
+
+.images {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+}
+
+.albums-image {
+  background-image: url('/records.jpg');
+}
+
+.artists-image {
+  background-image: url('/artist.jpg');
+}

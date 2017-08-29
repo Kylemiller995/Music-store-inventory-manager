@@ -11,6 +11,7 @@
 <p><%=album.buy_price%></p>
 <p><%=album.sell_price%></p>
 <p><%=album.stock_level(album.quantity)%>
+<p><%=album.markup(album.buy_price, album.sell_price)%>%</p>
 
 <p><a href="/albums/<%=album.id%>">Further Details</a></p>
 <br>
