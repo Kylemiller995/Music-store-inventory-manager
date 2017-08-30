@@ -187,3 +187,14 @@ body{
   background-color: wheat;
   flex-wrap:nowrap;
 }
+
+.album_form_edit{
+  width: 11%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: black 1px solid;
+  justify-content: center;
+  background-color: wheat;
+  flex-wrap:nowrap;
+}

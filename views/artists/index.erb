@@ -1,10 +1,22 @@
-<h1>Artists</h1>
-<p><a href="/artists/new">Add new artist</a></p>
-<br>
-<br>
-<% @artists.each do |artist| %>
-<p><%=artist.artist_name%><p>
-<p><a href="/artists/<%=artist.id%>">Further Details</a></p>
-<br>
-<br>
-<%end%>
+<div class="div_wrapper_top">
+  <h1 id="album_page_title">A R T IST S</h1>
+</div>
+
+<div class="homebar">
+  <a href="/home" class="create_new_cell">H OME</a>
+</div>
+
+<div class="create_new">
+  <p><a href="/artists/new" class="create_new_cell">Add New Artist</a></p>
+</div>
+
+
+<div class = "album_wrapper">
+  <%@artists.each do |artist|%>
+    <div class="album_cell">
+    <p><%=artist.artist_name%><p>
+    <p><a href="/artists/<%=artist.id%>">Artist Details</a></p>
+
+    </div>
+  <%end%>
+</div>

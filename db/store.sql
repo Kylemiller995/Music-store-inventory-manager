@@ -13,7 +13,7 @@ CREATE TABLE album(
   quantity INT,
   buy_price NUMERIC,
   sell_price NUMERIC,
-  artist_id INT8 REFERENCES artist(id),
+  artist_id INT8 REFERENCES artist(id) ON DELETE CASCADE,
   album_cover_url VARCHAR(225)
 );
 

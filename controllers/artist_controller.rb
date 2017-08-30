@@ -24,7 +24,7 @@ get '/artists/:id' do
 end
 
 get '/artists/:id/edit' do
-  @artists= Artist.find(params['id'])
+  @artist= Artist.find(params['id'])
   erb(:"artists/edit")
 end
 

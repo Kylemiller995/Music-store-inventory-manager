@@ -1,9 +1,18 @@
 <h1>edit artist</h1>
 
-<form method = "post" action="/artists">
+<div class="homebar">
+  <a href="/home" class="create_new_cell">HO M E</a>
+</div>
+
+<div class="create_new">
+  <p><a href="/albums" class="create_new_cell">A LBU MS</a></p>
+</div>
+
+
+<form method = "post" action="/artists/<%=@artist.id%>">
 
   <label for="artist-name">Artist Name</label>
-  <input type="text" name ="name" id= "artist-name" value="<%=@artists.artist_name%>"/>
+  <input type="text" name ="artist_name" id= "artist-name" value="<%=@artist.artist_name%>"/>
 
   <input type="submit" value="Update Artist Name"/>
 </form>

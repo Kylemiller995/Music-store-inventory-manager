@@ -51,7 +51,7 @@ album3 = Album.new({
 
 album4 = Album.new({
   'name' => 'Yesterdays Gone',
-  'genre' => 'rap',
+  'genre' => 'Rap',
   'quantity' => 199,
   'buy_price' => 8.00,
   'sell_price' => 10.00,
