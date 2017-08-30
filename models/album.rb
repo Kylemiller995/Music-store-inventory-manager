@@ -97,8 +97,9 @@ class Album
   end
 
   def markup(buy_price, sell_price)
-    gross_profit = buy_price/sell_price
-    result = (gross_profit/buy_price)*100
+    buy_price.to_f
+    sell_price.to_f
+    result = (((sell_price/buy_price) - 1)*100)
     return result.round(2)
   end
 

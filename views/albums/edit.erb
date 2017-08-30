@@ -17,7 +17,7 @@
         <input type="text" name ="name" id= "album-title" value="<%=@album.name%>"/>
 
 
-        <label for="artist-select">Artist:</label>
+        <label for="artist-select">Artist</label>
         <select name="artist_id" id="artist-select" selected="<%= @album.artist_id  %>">
           <% @artists.each do |artist| %>
             <% if artist.id == @album.artist_id %>
