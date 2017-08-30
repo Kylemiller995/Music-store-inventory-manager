@@ -76,11 +76,14 @@
   font-size: 20px;
   margin-top: 30px
 }
-
+html{
+  height:100%;
+}
 
 body{
   background-image: url('/background2.jpg');
   background-size: contain;
+  min-height: 100%;
 }
 
 .images {
@@ -110,9 +113,10 @@ body{
 .memes{
   position:absolute;
   top: 30px;
-  right: 100px;
-  width: 10px;
-  height: 10px;
+  right: 150px;
+  width: 5px;
+  height: 5px;
+  z-index: -1;
 }
 
 .album_wrapper{
@@ -178,7 +182,7 @@ body{
 }
 
 .album_form{
-  width: 12%;
+  width: 13%;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -189,7 +193,7 @@ body{
 }
 
 .album_form_edit{
-  width: 11%;
+  width: 13%;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -197,4 +201,31 @@ body{
   justify-content: center;
   background-color: wheat;
   flex-wrap:nowrap;
+}
+
+
+#artist_name_title{
+  font-size: 40px;
+  font-family: 'Roboto' sans-serif;
+  color: #551A8B;
+  text-shadow: 2px 2px 2px #ff0000;
+  text-decoration: underline;
+}
+
+@media (min-width:480) {
+  .grid-row-sm{
+    flex-direction: row;
+  }
+}
+
+@media (mid-width: 720px){
+  .grid-row-md{
+    flex-direction: row;
+  }
+}
+
+@media (mid-width: 960px){
+  .grid-row-lg{
+    flex-direction: row;
+  }
 }

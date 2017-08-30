@@ -22,7 +22,6 @@
     <p>Buy price  £<%=@album.buy_price%> </p>
     <p>Sell price  £<%=@album.sell_price%></p>
     <p>Stock Quantity  <%=@album.quantity%></p>
-    <p>Stock Level  <%=@album.stock_level(@album.quantity)%></p>
     <p>Markup percentage  <%=@album.markup(@album.buy_price, @album.sell_price)%>%</p>
     <a href="/albums/<%= @album.id %>/edit" class="">Edit Album Details</a>
     <form action="/albums/<%= @album.id %>/delete" method="POST"><input type="submit" value="Delete Album"></form>

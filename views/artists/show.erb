@@ -7,14 +7,26 @@
 </div>
 
 <div class="create_new">
-  <p><a href="/artists" class="create_new_cell">artists</a></p>
+  <p><a href="/artists" class="create_new_cell">Artists</a></p>
 </div>
 
-<p><%=@artist.artist_name%></p>
+<div class="create_new">
+  <p id="artist_name_title"><%=@artist.artist_name%></p>
+</div>
+
+<div class="album_wrapper">
 <%for album in @artist.find_albums()%>
+<div class="album_cell">
+<img src="<%=album.album_cover_url%>" class="album_images">
 <p><%=album.name%></p>
+<a href="/albums/<%=album.id%>">Show more</a>
+</div>
 <% end %>
 
+<div class="div_wrapper_foot">
+<form action="/artists/<%= @artist.id %>/delete" method="POST"><input type="submit" value="Delete Artist and Albums"></form>
+</div>
 
-<a href="/artists/<%= @artist.id %>/edit">Edit</a>
-<form action="/artists/<%= @artist.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<div class="create_new">
+  <a href="/artists/<%= @artist.id %>/edit">Edit Artist Name</a>
+</div>

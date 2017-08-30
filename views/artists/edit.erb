@@ -1,14 +1,16 @@
-<h1>edit artist</h1>
-
+<div class="div_wrapper_top">
+<h1 id="album_page_title">ED IT AR TIST</h1>
+</div>
 <div class="homebar">
   <a href="/home" class="create_new_cell">HO M E</a>
 </div>
 
 <div class="create_new">
-  <p><a href="/albums" class="create_new_cell">A LBU MS</a></p>
+  <p><a href="/artists" class="create_new_cell">ART IS TS</a></p>
 </div>
 
-
+<div class="album_wrapper">
+  <div class="album_form_edit">
 <form method = "post" action="/artists/<%=@artist.id%>">
 
   <label for="artist-name">Artist Name</label>
@@ -16,3 +18,5 @@
 
   <input type="submit" value="Update Artist Name"/>
 </form>
+</div>
+</div>

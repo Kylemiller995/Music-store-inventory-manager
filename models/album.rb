@@ -77,6 +77,8 @@ class Album
   def stock_level(quantity)
     if quantity.between?(1,19)
       return "Low"
+    elsif quantity == 0
+      return "Out of Stock"
     elsif quantity.between?(20, 199)
       return "Medium"
     elsif quantity.between?(200, 500)
@@ -100,7 +102,7 @@ class Album
     return result.round(2)
   end
 
-  
+
 
 
 

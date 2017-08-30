@@ -35,10 +35,13 @@
         <input type="number" name="quantity" id="album-quantity" value="<%=@album.quantity%>"/>
 
         <label for="album-buy-price">Album Buy Price</label>
-        <input type="number" name="buy_price" id="album-buy-price" value="<%=@album.buy_price%>"/>
+        <input type="number" name="buy_price" id="album-buy-price" value="<%=@album.buy_price%>" step=".01"/>
 
         <label for="album-sell-price">Sell Price</label>
-        <input type="number" name="sell_price" id="album-sell-price" value="<%=@album.sell_price%>"/>
+        <input type="number" name="sell_price" id="album-sell-price" value="<%=@album.sell_price%>" step=".01"/>
+
+        <label for="album-cover-url">Album cover URL</label>
+        <input type="name" name="album_cover_url" id="album-cover-url" value="<%=@album.album_cover_url%>"/>
 
         <input type="submit" value="Update Album"/>
 

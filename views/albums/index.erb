@@ -19,6 +19,7 @@
     <p><%=album.name%></p>
     <p><%=album.artist.artist_name%></p>
     <p><%=album.genre%></p>
+    <p>Stock level: <%=album.stock_level(album.quantity)%></p>
     <p><a href="/albums/<%=album.id%>">Show More</a></p>
   </div>
   <%end%>
